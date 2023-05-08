@@ -1,10 +1,13 @@
 const DisplayBoxes = (props) => {
-    const boxes = props.listOfBoxes
+    // My original solution:
+    // const boxes = props.listOfBoxes
+    // the solution on the platform shows destructurng of props. My response:
+    const {listOfBoxes: boxes} = props
     const boxStyle = (boxAtt) => {
         return {
-            height: parseInt(boxAtt.size) || 50,
-            width: parseInt(boxAtt.size) || 50,
-            background: boxAtt.color || 'light-gray',
+            height: parseInt(boxAtt.size),
+            width: parseInt(boxAtt.size),
+            background: boxAtt.color,
             margin: '10px'
         }
     }

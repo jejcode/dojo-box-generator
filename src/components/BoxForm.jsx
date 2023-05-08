@@ -6,7 +6,7 @@ const BoxForm = (props) => {
 
     const drawBox = (e) => {
         e.preventDefault()
-        props.onNewBox({color: boxColor || 'black', size: boxSize || 25})
+        props.onNewBox({color: boxColor || 'gray', size: boxSize || 25})
 
         SetBoxColor("")
         SetBoxSize("")
